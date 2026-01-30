@@ -38,10 +38,6 @@ The solution uses Natural Language Processing (NLP) and an AI language model to:
 
 git clone https://github.com/Umakant051/IronLady-AI-Intern-Assignment.git
 
-
-
-
-
 ##### 2\. Navigate to Task 1 folder:
 
 cd IronLady-AI-Intern-Assignment/Task1-AI-Chatbot
@@ -55,20 +51,15 @@ python -m venv env
 env\\Scripts\\activate
 
 4. Install required dependencies:
----
 
 pip install -r requirements.txt
-
 
 
 ##### 5\. Run the Streamlit application:
 
 streamlit run app.py
 
-
-
 ##### 6\. Open the browser link shown in the terminal to interact with the chatbot.
-
 
 
 Note: The chatbot runs in a fallback/demo mode without requiring paid API keys.
