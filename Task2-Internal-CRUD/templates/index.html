@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Program</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for e in enquiries %}
+    <tr>
+      <td>{{ e["id"] }}</td>
+      <td>{{ e["name"] }}</td>
+      <td>{{ e["email"] }}</td>
+      <td>{{ e["phone"] }}</td>
+      <td>{{ e["program"] }}</td>
+      <td><span class="badge">{{ e["status"] }}</span></td>
+      <td>
+        <a class="link" href="{{ url_for('edit', enquiry_id=e['id']) }}">Edit</a>
+        &nbsp;|&nbsp;
+        <form style="display:inline;" method="POST" action="{{ url_for('delete', enquiry_id=e['id']) }}"
+              onsubmit="return confirm('Delete this enquiry?');">
+          <button class="danger" type="submit">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+
+    {% if enquiries|length == 0 %}
+    <tr>
+      <td colspan="7">No enquiries yet. Click “New Enquiry”.</td>
+    </tr>
+    {% endif %}
+  </tbody>
+</table>
+
+{% endblock %}

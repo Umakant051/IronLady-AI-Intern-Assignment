@@ -7,3 +7,19 @@ api_key
 api_key.txt
 .env
 *.env
+
+# --- Task 2 (SQLite database) ---
+Task2-Internal-CRUD/enquiries.db
+
+# --- Python ---
+__pycache__/
+*.pyc
+
+# --- Virtual environments ---
+env/
+venv/
+.venv/
+
+# --- OS files ---
+.DS_Store
+Thumbs.db

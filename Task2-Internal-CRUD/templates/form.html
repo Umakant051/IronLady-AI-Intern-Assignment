@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>{{ "Create Enquiry" if mode == "create" else "Edit Enquiry" }}</h3>
+
+<form method="POST">
+  <p>
+    <label>Name *</label><br/>
+    <input type="text" name="name" style="width:100%;padding:8px"
+           value="{{ enquiry['name'] if enquiry else '' }}" required>
+  </p>
+
+  <p>
+    <label>Email *</label><br/>
+    <input type="email" name="email" style="width:100%;padding:8px"
+           value="{{ enquiry['email'] if enquiry else '' }}" required>
+  </p>
+
+  <p>
+    <label>Phone</label><br/>
+    <input type="text" name="phone" style="width:100%;padding:8px"
+           value="{{ enquiry['phone'] if enquiry else '' }}">
+  </p>
+
+  <p>
+    <label>Program</label><br/>
+    <input type="text" name="program" style="width:100%;padding:8px"
+           value="{{ enquiry['program'] if enquiry else '' }}">
+  </p>
+
+  <p>
+    <label>Message</label><br/>
+    <textarea name="message" style="width:100%;padding:8px" rows="4">{{ enquiry['message'] if enquiry else '' }}</textarea>
+  </p>
+
+  {% if mode == "edit" %}
+  <p>
+    <label>Status</label><br/>
+    <select name="status" style="width:100%;padding:8px">
+      {% set current = enquiry['status'] %}
+      {% for s in ["New", "Contacted", "In Progress", "Enrolled", "Closed"] %}
+        <option value="{{ s }}" {% if s == current %}selected{% endif %}>{{ s }}</option>
+      {% endfor %}
+    </select>
+  </p>
+  {% endif %}
+
+  <button type="submit" class="button">Save</button>
+  <a class="link" href="{{ url_for('index') }}">Cancel</a>
+</form>
+
+{% endblock %}
