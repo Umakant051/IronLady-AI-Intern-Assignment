@@ -4,19 +4,27 @@
 Managing learner enquiries manually can be time-consuming and error-prone for Iron Lady’s internal team.
 
 ## Proposed Solution
-A simple internal application to manage enquiries with the following features:
-- Create new enquiry
-- View all enquiries
+This task proposes a conceptual internal business automation system to manage learner enquiries efficiently.
+
+The system is designed to support the following operations:
+- Create new learner enquiries
+- View all submitted enquiries
 - Update enquiry status
 - Delete resolved or invalid enquiries
 
-## CRUD Operations
-- Create: Add new learner enquiry
-- Read: View all enquiries
-- Update: Modify enquiry details or status
-- Delete: Remove old records
+## CRUD Design Overview
+- Create: Add new learner enquiry records
+- Read: Display all stored enquiries
+- Update: Modify enquiry details or enquiry status
+- Delete: Remove outdated or resolved enquiries
+
+## AI Involvement (Future Scope)
+AI can be integrated in the future to:
+- Automatically categorize enquiries
+- Detect duplicate or spam enquiries
+- Prioritize leads based on urgency
 
 ## Impact
-- Improved internal efficiency
-- Reduced manual work
-- Better tracking of leads and enquiries
+- Improved internal workflow efficiency
+- Reduced manual tracking effort
+- Better enquiry management and scalability
