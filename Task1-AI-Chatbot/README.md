@@ -42,18 +42,15 @@ git clone https://github.com/Umakant051/IronLady-AI-Intern-Assignment.git
 
 cd IronLady-AI-Intern-Assignment/Task1-AI-Chatbot
 
-&nbsp;
-
 ##### 3\. (Optional but recommended) Create and activate a virtual environment:
 
 python -m venv env
 
 env\\Scripts\\activate
 
-4. Install required dependencies:
+##### 4\. Install required dependencies:
 
 pip install -r requirements.txt
-
 
 ##### 5\. Run the Streamlit application:
 
