@@ -18,12 +18,38 @@ if user_input:
     st.session_state.messages.append(("User", user_input))
 
     # Default fallback reply
-    ai_reply = (
-        "Iron Lady is a women-focused learning and career empowerment platform. "
-        "It offers structured programs, mentorship, and skill development to help "
-        "learners grow professionally. This assistant helps users understand "
-        "programs, eligibility, and enrollment processes."
-    )
+    user_text = user_input.lower()
+
+    if "what is iron lady" in user_text:
+        ai_reply = (
+            "Iron Lady is a women-focused learning and career empowerment platform "
+            "that provides structured programs, mentorship, and skill development."
+        )
+
+    elif "program" in user_text:
+        ai_reply = (
+            "Iron Lady offers career-oriented programs designed to enhance skills, "
+            "confidence, and leadership abilities for women."
+        )
+
+    elif "enroll" in user_text or "join" in user_text:
+        ai_reply = (
+            "Users can enroll in Iron Lady programs by exploring available courses "
+            "and following the enrollment process on the official website."
+        )
+
+    elif "why" in user_text and "iron lady" in user_text:
+        ai_reply = (
+            "The name 'Iron Lady' represents strength, confidence, and resilience, "
+            "reflecting the platform’s mission to empower women professionally."
+        )
+
+    else:
+        ai_reply = (
+            "I can help you understand Iron Lady programs, enrollment, and support. "
+            "Please ask a specific question."
+        )
+
 
     # Try OpenAI ONLY if API key exists
     if API_KEY:
