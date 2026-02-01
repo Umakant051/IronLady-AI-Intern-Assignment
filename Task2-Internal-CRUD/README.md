@@ -40,7 +40,7 @@ AI can be integrated in the future to:
 
 ### \## Steps to Run the Application
 
-
+> The following steps should be executed on your local machine using Command Prompt (Windows) or Terminal.
 
 ##### 1\. Clone the repository:
 
