@@ -32,6 +32,8 @@ The solution uses Natural Language Processing (NLP) and an AI language model to:
 
 ### \## Steps to Run the Application
 
+> The following steps should be executed on your local machine using Command Prompt (Windows) or Terminal.
+
 ##### 
 
 ##### 1\. Clone the repository:
